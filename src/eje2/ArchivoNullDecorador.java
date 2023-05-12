@@ -2,11 +2,11 @@ package eje2;
 
 import java.io.File;
 
-public class ArchivoNuloDecorador implements Componente {
+public class ArchivoNullDecorador implements Componente {
 
 	private Componente componente;
 
-	public ArchivoNuloDecorador(Componente componente) {
+	public ArchivoNullDecorador(Componente componente) {
 		this.componente = componente;
 	}
 

@@ -5,6 +5,7 @@ import java.io.File;
 public class Main {
 
 	public static void main(String[] args) {
+
 		RestCall restCall = new RestCall("https://jsonplaceholder.typicode.com/posts");
 		System.out.println(restCall.run());
 

@@ -17,14 +17,15 @@ public class EnBaseDecorador implements Componente {
 	public String run() {
 
 		Gson     gson    = new Gson();
-		Posteo[] posteos = gson.fromJson(componente.run(), Posteo[].class);
+		String   aux     = componente.run();
+		Posteo[] posteos = gson.fromJson(aux, Posteo[].class);
 
 		for (Posteo posteo : posteos) {
 			String datos = obtenerDatos(posteo);
 			miDB.registrar(datos);
 		}
 
-		return null;
+		return aux;
 	}
 
 	private String obtenerDatos(Posteo p) {

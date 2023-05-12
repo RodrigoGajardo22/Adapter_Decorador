@@ -16,9 +16,11 @@ public class EnArchivoDecorador implements Componente {
 	@Override
 	public String run() {
 
-		registrar(decorado.run());
+		String aux = decorado.run();
 
-		return null;
+		registrar(aux);
+
+		return aux;
 	}
 
 	private void registrar(String datos) {
